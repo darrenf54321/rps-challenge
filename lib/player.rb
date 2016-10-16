@@ -1,8 +1,10 @@
+require_relative 'weapon'
+
 class Player
 
-  attr_reader :name, :weapon
+  attr_reader :name, :weapon, :jigsaw_weapon
 
-  def initialize(name )
+  def initialize(name)
     @name = name
   end
 
@@ -12,5 +14,9 @@ class Player
 
   def weapon_choice(weapon)
     @weapon = weapon
+  end
+
+  def jigsaw_weapon(jigsaw_weapon)
+    @jigsaw_weapon = WEAPON.sample
   end
 end

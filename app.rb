@@ -26,7 +26,7 @@ class Rps < Sinatra::Base
 
     post '/weapon_choice' do
       @game.player_1.weapon_choice(params[:weapon_choice])
-      @game.player_2.weapon_choice(Weapon::WEAPON.sample)
+      @game.player_2.weapon_choice(Player::jigsaw_weapon)
       redirect '/result'
     end
 
